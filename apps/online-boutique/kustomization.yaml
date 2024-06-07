@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: online-boutique
+resources:
+- https://github.com/GoogleCloudPlatform/microservices-demo//kustomize/base?ref=main
+components:
+- https://github.com/GoogleCloudPlatform/microservices-demo//kustomize/components/network-policies?ref=main
+- https://github.com/GoogleCloudPlatform/microservices-demo//kustomize/components/non-public-frontend?ref=main
+# TODO: Replace with upstream once PR is merged
+# https://github.com/GoogleCloudPlatform/microservices-demo/pull/2578
+- https://github.com/aslafy-z/microservices-demo//kustomize/components/without-loadgenerator?ref=patch-1
