@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - grafana.k8saas.gcp.cloud.ccl-consulting.fr
+      - shop.k8saas.gcp.cloud.ccl-consulting.fr
       secretName: tls-grafana
   rules:
-    - host: "grafana.k8saas.gcp.cloud.ccl-consulting.fr"
+    - host: shop.k8saas.gcp.cloud.ccl-consulting.fr
       http:
         paths:
           - path: /
