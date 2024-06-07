@@ -11,7 +11,7 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: bootstrap
+    path: apps
     repoURL: https://github.com/ccl-consulting/k8saas-user-apps
     targetRevision: HEAD
   syncPolicy:
