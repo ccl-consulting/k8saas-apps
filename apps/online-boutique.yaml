@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: online-boutique
     name: in-cluster
-  project: default
+  project: user
   source:
     path: apps/online-boutique
     repoURL: https://github.com/ccl-consulting/k8saas-user-apps
