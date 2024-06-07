@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap-user
+  namespace: k8saas-system
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: k8saas-system
+    name: in-cluster
+  project: default
+  source:
+    path: bootstrap
+    repoURL: https://github.com/ccl-consulting/k8saas-user-apps
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
