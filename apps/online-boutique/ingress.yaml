@@ -4,6 +4,9 @@ metadata:
   name: frontend
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    forecastle.stakater.com/expose: "true"
+    forecastle.stakater.com/appName: "Shop"
+    forecastle.stakater.com/group: "Apps"
 spec:
   ingressClassName: nginx
   tls:
