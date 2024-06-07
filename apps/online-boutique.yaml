@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: online-boutique
+  namespace: k8saas-system
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: online-boutique
+    name: in-cluster
+  project: default
+  source:
+    path: apps/online-boutique
+    repoURL: https://github.com/ccl-consulting/k8saas-user-apps
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
