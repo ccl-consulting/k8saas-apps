@@ -13,7 +13,7 @@ spec:
   source:
     path: apps/online-boutique
     repoURL: https://github.com/ccl-consulting/k8saas-user-apps
-    targetRevision: HEAD
+    targetRevision: env/k8saas-zan
   syncPolicy:
     automated:
       prune: true
